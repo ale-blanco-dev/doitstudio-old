@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+:root {
+    --title: #FFACC2;
+    --botones: #FF6973;
+    --fondo: #fff;
+    --bordes: #FF6973;
+    --letra: 'Chewy', cursive;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav.navbar.navbar-expand-sm.justify-content-center {
+    border-bottom: 2px solid var(--bordes);
+}
+
+nav.navbar.navbar-expand-lg.navbar-light {
+    margin-top: 1%;
+    width: 100%;
+    height: 20px;
+    background-color: var(--fondo);
+    color: var(--fondo);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 5px;
+    background-color: var(--bordes);
+    margin-top: 10px;
+    font-weight: bolder;
+    border-radius: 50%;
+}
+
+.nav-item-separator {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--bordes);
+    font-size: 40px;
+    font-family: Inter;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--title);
+    font-size: 40px;
+    font-family: var(--letra);
+}
+.text-email{
+    color: var(--botones);
+    font-family: var(--letra);
+    font-size: 20px;
+}
+.nav-link:hover {
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: .8s ease all;
+    color: var(--bordes);
+}
+
+/* Updated CSS for responsive menu */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+img.nav-img {
+    width: 82px;
+    height: 69px;
+    margin-right: 31px;
+}
+
+.navbar-nav {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item-separator {
+    margin: 0 10px;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--fondo);
+    text-align: center;
+    display: none;
+}
+
+.navbar-nav .dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.navbar-nav .dropdown-menu .nav-link {
+    font-size: 16px;
+    font-family: var(--letra);
+    color: var(--title);
+    text-decoration: none;
+    transition: .8s ease all;
+}
+
+/* Estilos para el ícono de la lista desplegable */
+.navbar-toggler-icon {
+    color: var(--title);
+    font-size: 30px;
+    line-height: 1;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/* Mostrar la lista desplegable al hacer clic en el logo */
+.navbar-toggler:focus+.navbar-collapse .dropdown-menu {
+    display: block;
+}
+
+.buscador-home {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+}
+
+.form-control {
+    border: 1px solid var(--bordes);
+    border-radius: 67px 67px 67px 67px;
+    -webkit-border-radius: 67px 67px 67px 67px;
+    -moz-border-radius: 67px 67px 67px 67px;
+    color: rgb(215, 215, 215);
+}
+
+
+
+.container-images-1 {
+    text-align: center;
+    margin-top: 3%;
+    max-width: 1200px;
+    /* Ancho máximo del contenedor */
+    margin-left: auto;
+    /* Centrar horizontalmente */
+    margin-right: auto;
+    /* Centrar horizontalmente */
+}
+
+.row.row-cols-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+    /* Ajustar margen izquierdo */
+    margin-right: -10px;
+    /* Ajustar margen derecho */
+}
+
+.col-collection {
+    flex-basis: 25%;
+    padding: 10px;
+    /* Aumentar el espaciado interno */
+    box-sizing: border-box;
+}
+
+
+.image-wrapper {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.image-colection {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 386px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.image-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .image-colection {
+    opacity: 0.2;
+}
+
+.image-wrapper:hover .image-hover {
+    opacity: 1;
+}
+
+.image-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 160px;
+    height: 31px;
+    border-radius: 60px;
+    background-color: var(--title);
+    color: var(--fondo);
+    text-align: center;
+    font-size: 16px;
+    font-family: Chewy;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .image-title {
+    opacity: 1;
+}
+
+.custom-wrapper {
+    margin-top: 2%;
+}
+
+.custom-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-carousel img {
+    display: none;
+    height: 700px;
+}
+
+.custom-carousel img.active {
+    opacity: 1;
+    display: block;
+    width: 100%;
+}
+
+.custom-carousel-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.custom-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--fondo);
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid var(--bordes);
+    transition: background-color 0.3s ease;
+}
+
+.custom-button.active {
+    background-color: var(--title);
+}
+
+.details-shop {
+    background-color: var(--title);
+    padding: 25px;
+}
+
+.text-center {
+    font-family: 'Chewy';
+    margin-bottom: 1%;
+}
+
+.row.detail {
+    background-color: var(--title);
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.input-group.mb-3 {
+    color: #fff;
+    margin: 0 !important;
+}
+
+.input-group.mb-3 input {
+    color: var(--bordes);
+    font-family: var(--letra);
+    border: 1px solid var(--bordes);
+}
+
+.input-custom::placeholder {
+    color: var(--title);
+}
+
+.input-group.mb-3 button {
+    color: #fff;
+    font-family: var(--letra);
+    border: 1px solid var(--bordes);
+}
+
+.input-group.mb-3 button:hover {
+    color: #fff;
+    font-family: var(--letra);
+    background-color: var(--bordes);
+    border: 1px solid var(--bordes);
+}
+
+.col.text-justify {
+    background-color: #FF6973;
+    color: #fff;
+}
+
+.col.text-justify p.redirect-buy {
+    cursor: pointer;
+}
+
+.container.image-news {
+    margin-top: 2%;
+    border: 2px solid var(--bordes);
+    border-radius: 30px;
+    padding: 1%;
+}
+
+.container.image-news .row {
+    height: 100%;
+}
+
+.only.text {
+    font-size: 30px;
+    font-family: 'Chewy';
+    margin-bottom: 1%;
+    color: var(--bordes);
+}
+
+.col-md-6.image img {
+    width: 100%;
+    height: auto;
+}
+
+.container.metodosdepago {
+    text-align: center;
+    height: 50px;
+}
+
+.title,
+.icons-social,
+.img_wompi,
+.icons {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--title);
+    cursor: pointer;
+    font-size: 30px;
+    font-family: var(--letra);
+}
+
+.img_wompi {
+    max-width: 100px;
+    height: auto;
+}
+
+.img-payments {
+    width: 60px;
+}
+
+.image-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container-image {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    /* Ajusta este valor según tus necesidades */
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin-top: 2%;
+        margin-bottom: 22%;
+        display: block;
+        height: 50px;
+        margin-left: 2%;
+    }
+
+    .navbar-toggler.show {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin-top: 2%;
+        margin-bottom: 22%;
+        display: block;
+        height: 50px;
+        margin-left: 2%;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--fondo);
+        text-align: center;
+    }
+
+    .navbar-collapse ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-collapse li {
+        width: 100%;
+        border-top: 1px solid var(--bordes);
+    }
+
+    .navbar-collapse li.nav-item-img {
+        border-top: none;
+    }
+
+    .navbar-nav .nav-item-separator {
+        display: none;
+    }
+
+    .navbar-collapse .nav-link {
+        font-size: 16px;
+        font-family: var(--letra);
+        color: var(--title);
+        text-decoration: none;
+        transition: .8s ease all;
+    }
+
+    nav.navbar.navbar-expand-sm.justify-content-center {
+        border: none;
+    }
+
+    nav.navbar.navbar-expand-sm.justify-content-center.show {
+        border-bottom: 2px solid var(--bordes);
+    }
+
+    .navbar-nav .dropdown-menu {
+        display: none !important;
+    }
+
+    .collapse.navbar-collapse {
+        background-color: var(--fondo);
+        margin-top: 65px;
+    }
+
+    .buscador-home {
+        margin-right: 100px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .buscador-home.show {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2%;
+    }
+
+    .collapse.navbar-collapse.show {
+        position: relative;
+        display: block;
+        height: auto;
+        background-color: var(--fondo);
+        margin-top: 65px;
+
+    }
+
+    .collapse.navbar-collapse.show .navbar-nav .nav-item .nav-link {
+        position: relative;
+        display: block;
+        height: auto;
+        color: var(--botones);
+    }
+
+    .nav-item-img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+
+    .nav-img {
+        position: absolute;
+        top: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details-shop {
+        height: auto;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col-md-3 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col-sm-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .row.detail {
+        width: 100%;
+    }
+
+    .container.metodosdepago {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .img_wompi {
+        max-width: 80px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .icons i,
+    .icons img {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3.title {
+        text-align: center;
+    }
+
+    .container-image {
+        max-width: 90%;
+    }
+
+    .custom-carousel img {
+        display: none;
+        height: auto;
+    }
+
+
+}
